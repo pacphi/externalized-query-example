@@ -23,7 +23,7 @@ The `build.gradle` file includes the [maven-publish](https://docs.gradle.org/cur
 gradle publishToMavenLocal
 ```
 
-This will publish the artifact and a [POM](https://maven.apache.org/pom.html#What_is_the_POM) file to your `.m2/repository` directory in a `{groupId}/{artifactId}/{version} sub-directory.
+This will publish the artifact and a [POM](https://maven.apache.org/pom.html#What_is_the_POM) file to your `.m2/repository` directory in a `{groupId}/{artifactId}/{version}` sub-directory.
 
 ## Details
 
