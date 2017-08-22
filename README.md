@@ -2,16 +2,28 @@
 
 This project employs Spring Boot and Spring Data JPA to demonstrate how to successfully read and execute a SQL statement by key from a properties file.
 
+
 ## Prerequisites
 
 * Java JDK 1.8u141
 * Gradle 4.1
+
 
 ## How to compile and run unit tests
 
 ```
 gradle test
 ```
+
+## How to publish artifact to local Maven repository
+
+The `build.gradle` file includes the [maven-publish](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:install) plugin which allows you to execute
+
+```
+gradle publishToMavenLocal
+```
+
+This will publish the artifact and a [POM](https://maven.apache.org/pom.html#What_is_the_POM) file to your `.m2/repository` directory in a `{groupId}/{artifactId}/{version} sub-directory.
 
 ## Details
 
@@ -26,6 +38,7 @@ We implement `CourseService` to demonstrate how to employ a [JdbcTemplate](https
 Finally we author a unit test for the aformentioned service. (Spring Boot Test is [helpful](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html)).
 
 An [in-memory](http://www.h2database.com/html/main.html) database is [initialized](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-database-initialization.html#howto-initialize-a-database-using-hibernate) on startup.
+
 
 ## Credits
 

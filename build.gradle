@@ -12,6 +12,7 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 apply plugin: 'org.springframework.boot'
 
 version = '0.0.1-SNAPSHOT'
@@ -28,4 +29,16 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'io.pivotal.example'
+            artifactId 'externalized-query-example'
+            version '1.0'
+
+            from components.java
+        }
+    }
 }
