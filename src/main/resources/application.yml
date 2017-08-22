@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: h2
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    
+sql:
+  course:
+    byTitleAndNextStartDateTime: SELECT ID,TITLE,DESCRIPTION,LOCATION,DURATION,START_DATE_TIME FROM COURSE WHERE TITLE = ? AND START_DATE_TIME >= ?
+
+---
+spring:
+  profiles: h2
+  datasource:
+    url: jdbc:h2:mem:coursedb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    data-source-class-name: org.h2.jdbcx.JdbcDataSource
+    username: sa
+    password: sa
+  h2:
+    console:
+      enabled: true
