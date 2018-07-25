@@ -5,25 +5,27 @@ import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Entity
 @Table(name="COURSE")
-@Getter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode
+@Data
+@Builder
+@AllArgsConstructor(access=AccessLevel.PACKAGE)
+@NoArgsConstructor(access=AccessLevel.PACKAGE)
 public class Course {
 
-    @Id @GeneratedValue @Column(name="ID")
+    @Id 
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="ID")
     private Long id;
     
     @Column(name="TITLE")

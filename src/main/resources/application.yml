@@ -13,7 +13,7 @@ sql:
 spring:
   profiles: h2
   datasource:
-    url: jdbc:h2:mem:coursedb;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:mem:coursedb
     driver-class-name: org.h2.Driver
     data-source-class-name: org.h2.jdbcx.JdbcDataSource
     username: sa

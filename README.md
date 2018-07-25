@@ -5,8 +5,9 @@ This project employs Spring Boot and Spring Data JPA to demonstrate how to succe
 
 ## Prerequisites
 
-* Java JDK 1.8u141
-* Gradle 4.1
+* Java JDK 1.8u181 or better
+* Gradle 4.8.1
+	* Note: as of `2018-07-25` do not upgrade to Gradle 4.9 as there is this outstanding [bug](https://github.com/rzwitserloot/lombok/issues/1716)
 
 
 ## How to compile and run unit tests
