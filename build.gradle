@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.3.RELEASE'
+		springBootVersion = '2.1.1.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -24,13 +24,12 @@ repositories {
 }
 
 dependencies {
-	compileOnly('org.projectlombok:lombok:1.18.0')
 	compileOnly('org.springframework.boot:spring-boot-configuration-processor')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6')
+	compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8')
 	runtime('org.springframework.boot:spring-boot-devtools')
-	runtime('com.h2database:h2')
+	runtime('org.hsqldb:hsqldb:2.4.1')
 	// @see https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j
 	runtime('javax.xml.bind:jaxb-api:2.3.0')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

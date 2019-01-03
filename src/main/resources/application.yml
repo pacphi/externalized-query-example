@@ -1,6 +1,5 @@
 spring:
-  profiles:
-    active: h2
+  profiles.include: hsqldb
   jackson:
     serialization:
       write-dates-as-timestamps: false
@@ -9,15 +8,17 @@ sql:
   course:
     byTitleAndNextStartDateTime: SELECT ID,TITLE,DESCRIPTION,LOCATION,DURATION,START_DATE_TIME FROM COURSE WHERE TITLE = ? AND START_DATE_TIME >= ?
 
+debug: true
+
 ---
 spring:
-  profiles: h2
+  profiles: hsqldb
   datasource:
-    url: jdbc:h2:mem:coursedb
-    driver-class-name: org.h2.Driver
-    data-source-class-name: org.h2.jdbcx.JdbcDataSource
+    url: jdbc:hsqldb:mem:coursedb
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    xa:
+      data-source-class-name: org.hsqldb.jdbc.JDBCDataSource
     username: sa
     password: sa
-  h2:
-    console:
-      enabled: true
+  jpa:
+    hibernate.ddl-auto: create-drop

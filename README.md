@@ -5,9 +5,8 @@ This project employs Spring Boot and Spring Data JPA to demonstrate how to succe
 
 ## Prerequisites
 
-* Java JDK 1.8u181 or better
-* Gradle 4.8.1
-	* Note: as of `2018-07-25` do not upgrade to Gradle 4.9 as there is this outstanding [bug](https://github.com/rzwitserloot/lombok/issues/1716)
+* Java JDK 1.8u192 or better
+* Gradle 4.10.3
 
 
 ## How to compile and run unit tests
@@ -27,8 +26,6 @@ gradle publishToMavenLocal
 This will publish the artifact and a [POM](https://maven.apache.org/pom.html#What_is_the_POM) file to your `.m2/repository` directory in a `{groupId}/{artifactId}/{version}` sub-directory.
 
 ## Details
-
-This project employs [Lombok](https://projectlombok.org/features/all) so we can annotate instead of writing what amounts to boilerplate code.
 
 We annotate `CourseQueries` with [ConfigurationProperties](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-loading-yaml) to encapsulate a namespace of `sql.course` queries found in `application.yml`
 
