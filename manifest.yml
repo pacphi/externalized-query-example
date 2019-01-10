@@ -1,0 +1,13 @@
+---
+applications:
+- name: externalized-query-example
+  memory: 1G
+  random-route: true
+  stack: cflinuxfs3
+  buildpacks: 
+    - java_buildpack_offline
+  path: build/libs/externalized-query-example-0.1-SNAPSHOT.jar
+  instances: 1
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
