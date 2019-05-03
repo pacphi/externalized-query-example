@@ -31,7 +31,7 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('org.hsqldb:hsqldb:2.4.1')
 	// @see https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j
-	runtime('javax.xml.bind:jaxb-api:2.3.0')
+	runtime('javax.xml.bind:jaxb-api:2.3.1')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
