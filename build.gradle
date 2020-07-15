@@ -29,7 +29,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.1')
 	runtime('org.springframework.boot:spring-boot-devtools')
-	runtime('org.hsqldb:hsqldb:2.5.0')
+	runtime('org.hsqldb:hsqldb:2.5.1')
 	// @see https://stackoverflow.com/questions/43574426/how-to-resolve-java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception-in-j
 	runtime('javax.xml.bind:jaxb-api:2.3.1')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
